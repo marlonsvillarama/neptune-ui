@@ -1,0 +1,12 @@
+@import './root.css';
+
+body {
+    font-size: 14px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 80rem;
+    /* border-left: 1px solid red; */
+    /* border-right: 1px solid red; */
+}
