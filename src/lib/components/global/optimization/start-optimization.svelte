@@ -1,9 +1,11 @@
 <script>
     import { CircleCheck } from "@lucide/svelte";
     import Button from "@/components/ui/button/button.svelte";
+    import Sparkles from '@/assets/sparkles.svg';
 </script>
 
-<div class="rounded-xl border border-t-8 border-blue bg-linear-to-b from-blue-light to-50% to-background px-8 py-6 flex flex-col gap-8">
+<div class="rounded-xl border border-t-8 border-blue bg-linear-to-b from-blue-light to-50% to-background px-8 py-6 flex flex-col gap-8 relative">
+    <img src={Sparkles} alt="AI" class="absolute top-[1rem] right-[1rem] h-[6rem]">
     <div class="header grid gap-2">
         <span class="text-3xl font-semibold">Here's what you'll get</span>
         <span class="text-muted-foreground">Everything you need to optimize your NetSuite performance and unlock significant time and cost savings.</span>
