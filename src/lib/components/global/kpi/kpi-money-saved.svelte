@@ -12,14 +12,14 @@
         <div class="flex items-center justify-between">
             <div class="flex items-center gap-2">
                 <CircleDollarSign size={24} class="text-muted-foreground" />
-                <h2 class="text-sm text-muted-foreground uppercase">Money Spent</h2>
+                <h2 class="text-xs text-muted-foreground uppercase">Money Spent</h2>
             </div>
             <!-- <Badge variant="outline">
                 <TrendingUp /> +25%
             </Badge> -->
         </div>
         <div class="items-center flex flex-col gap-4 pb-2">
-            <h1 class="text-5xl font-bold">60,000</h1>
+            <h1 class="text-5xl font-bold text-primary/80">60,000</h1>
             <Badge variant="outline">
                 <TrendingUp /> +25% from last quarter
             </Badge>

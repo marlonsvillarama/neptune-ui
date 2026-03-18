@@ -7,6 +7,7 @@
     } from "@lucide/svelte";
     // import * as Progress from "@/components/ui/progress/index";
     import Badge from "@/components/ui/badge/badge.svelte";
+    import Button from "@/components/ui/button/button.svelte";
     import Progress from "@/components/ui/progress/progress.svelte";
 
     let {
@@ -49,7 +50,10 @@
     <div class="grid gap-0">
         <span class="text-md font-semibold">{title}</span>
         {#if attention.length > 0}
-            <span class="text-sm text-muted-foreground">{attention.length} item need{attention.length === 1 ? 's' : ''} attention</span>
+            <div class="flex items-center gap-2 text-xs">
+                <span class="text-muted-foreground/80">{attention.length} item need{attention.length === 1 ? 's' : ''} attention</span>
+                <a href="#" target="_blank">View</a>
+            </div>
         {/if}
     </div>
     <div class="grid gap-1">
@@ -60,6 +64,6 @@
         <Progress value={progress} class="bg-{statusStyle}" />
     </div>
     <div class="flex items-center justify-center gap-4">
-        <Badge variant={impactStyle} class="text-md font-bold">{impact.toUpperCase()}</Badge>
+        <Badge variant={impactStyle} class="text-sm font-medium">{impact.toUpperCase()}</Badge>
     </div>
 </div>

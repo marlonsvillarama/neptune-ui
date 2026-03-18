@@ -24,7 +24,7 @@
     ];
 </script>
 
-<section class="grid">
+<section class="grid gap-3">
     <div class="header flex items-center justify-between">
         <div class="header grid">
             <div class="flex items-center gap-3">

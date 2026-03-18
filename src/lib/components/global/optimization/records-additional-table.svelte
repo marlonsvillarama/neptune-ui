@@ -1,4 +1,5 @@
 <script>
+    import { cn } from "tailwind-variants";
     import { getCoreRowModel } from "@tanstack/table-core";
     import {
         createSvelteTable,
@@ -6,7 +7,7 @@
     } from "@/components/ui/data-table/index";
     import * as Table from '@/components/ui/table/index';
     import { recordTypes } from "./record-types";
-    console.log('recordTypes', recordTypes);
+    // console.log('recordTypes', recordTypes);
 
     let {
         columns,
@@ -41,7 +42,7 @@
         <Table.Header>
             <Table.Row>
                 {#each columns as column}
-                    <Table.Head>
+                    <Table.Head class={[ 'type', 'status' ].indexOf(column.accessorKey) >= 0 ? '' : 'text-center'}>
                         {column.header}
                     </Table.Head>
                 {/each}
@@ -51,7 +52,8 @@
             {#each data as row}
                 <Table.Row>
                     {#each columns as column}
-                        <Table.Cell>
+                        <Table.Cell class={[ 'type', 'status' ].indexOf(column.accessorKey) >= 0 ? '' : 'text-center'}>
+                            <!-- {`${column.accessorKey} = ${row[column.accessorKey]}`} -->
                             {parseRowValue(column, row)}
                         </Table.Cell>
                     {/each}
